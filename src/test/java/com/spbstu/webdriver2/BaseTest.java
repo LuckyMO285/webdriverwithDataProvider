@@ -1,5 +1,6 @@
 package com.spbstu.webdriver2;
 
+import com.spbstu.pageobjects.HomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -46,6 +47,7 @@ public class BaseTest {
         //options.addArguments("--leng=en-GB");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        HomePage.setDriver(driver);
     }
 
     @AfterSuite
